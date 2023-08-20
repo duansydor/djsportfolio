@@ -49,6 +49,28 @@ export default function Home() {
           }
         />
         <Project
+          imgsrc="/duoicon.png"
+          alt="DuolingoClone"
+          projname="Duolingo Clone"
+          projlink="https://duolingoclone-one.vercel.app/"
+          projinfo="Este projeto(ainda em desenvolvimento) é uma tentativa de copiar a interface do duolingo para praticar algumas funções do tailwind e de css em geral.
+          foi utilizado React com NextJS para algumas interações, como botões"
+          technologies={
+            [
+              {
+                id: 1,
+                name: "React",
+                width: "70%"
+              },
+              {
+                id: 2,
+                name: "TailwindCSS",
+                width: "38.5%"
+              },
+            ]
+          }
+        />
+        <Project
           imgsrc="/oldportfolio.png"
           alt="Portfolio(2019)"
           projname="Portfolio(2019)"
