@@ -54,7 +54,7 @@ export default function Home() {
           }
         />
         <Project
-          imgsrc="/Tarot.png"
+          imgsrc="/tarot.png"
           alt="Tarot"
           projname="Tarot"
           projlink="https://tarotreader-jet.vercel.app/"
