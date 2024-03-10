@@ -20,6 +20,66 @@ export default function Home() {
       </div>
       <h1 className='title mb-8 w-full text-center'>Projetos Recentes</h1>
       <div className='w-full grid justify-items-center lg:grid-cols-2 gap-2 lg:w-max m-auto'>
+      <Project
+          imgsrc="/FireChat.png"
+          alt="FireChat"
+          projname="FireChat"
+          projlink="https://firechat-tawny.vercel.app/"
+          projinfo="
+          Este é um projeto feito para uma vaga específica de Frontend onde tentei usar os requisitos solicitados na vaga para demonstrar minhas habilidades. É meu primeiro projeto utilizando Vue, Vuex, Vue Router e Firebase.
+          o codigo para este projeto pode ser encontrado em https://github.com/duansydor/firechat/"
+          technologies={
+            [
+              {
+                id: 1,
+                name: "Vue",
+                width: "100%"
+              },
+              {
+                id: 2,
+                name: "Vuex",
+                width: "100"
+              },
+              {
+                id: 3,
+                name: "Router",
+                width: "40%"
+              },
+              {
+                id: 4,
+                name: "Firebase",
+                width: "40%"
+              },
+            ]
+          }
+        />
+        <Project
+          imgsrc="/Tarot.png"
+          alt="Tarot"
+          projname="Tarot"
+          projlink="https://tarotreader-jet.vercel.app/"
+          projinfo="
+          Este WebApp gera cartas de Tarot aleatórias com seu respectivo significado, foi utilizado apenas HTML, Javscript e CSS e tambem Lottie para as animações"
+          technologies={
+            [
+              {
+                id: 1,
+                name: "JavaScript",
+                width: "70%"
+              },
+              {
+                id: 2,
+                name: "CSS",
+                width: "38.5%"
+              },
+              {
+                id: 3,
+                name: "Lootie",
+                width: "90%"
+              }
+            ]
+          }
+        />
         <Project
           imgsrc="/moldegenerator.png"
           alt="Projeto - gerador de moldes de letras"
@@ -67,33 +127,6 @@ export default function Home() {
                 name: "TailwindCSS",
                 width: "38.5%"
               },
-            ]
-          }
-        />
-        <Project
-          imgsrc="/oldportfolio.png"
-          alt="Portfolio(2019)"
-          projname="Portfolio(2019)"
-          projlink="https://duansydor.github.io/myportfolio/#/"
-          projinfo="
-          Este é o meu primeiro portfolio de desenvolvedor Web, foi utilizado ReactJs puro junto com CSS, utilizei alguns conhecimentos para criar uma calculadora interativa onde mostro como o React da a liberdade para criar componentes interativos de uma maneira mais facil e limpa."
-          technologies={
-            [
-              {
-                id: 1,
-                name: "React",
-                width: "70%"
-              },
-              {
-                id: 2,
-                name: "CSS",
-                width: "38.5%"
-              },
-              {
-                id: 3,
-                name: "Figma",
-                width: "90%"
-              }
             ]
           }
         />
