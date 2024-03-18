@@ -6,20 +6,27 @@ export default function Home() {
   return (
     <div>
       {/* Text info */}
-      <div className='grid justify-items-center text-center p-10 mt-12 text-blue-950 font-bold'>
-        <h1 className='title'>Quem sou eu?</h1>
-        <div className='info float-center lg:w-96'>
+      <div className='p-10 h-96 mt-24 h-auto text-blue-950 flex items-start flex-col md:flex-row md:mt-12'>
+      <div className="mt-auto mb-auto">
+        <h1 className='mt-auto text-2xl font-bold'>MEU ESPAÇO VIRTUAL</h1>
+        <h1 className="text-xl font-bold">sinta-se em casa!</h1>
+        <p className=' mt-2 w-96 text-sm mb-auto sm:w-96'>
           Seja bem vindo ao meu Portfólio. Me chamo Duan e sou um desenvolvedor front-end junior da cidade de Guarapuava, no Paraná.
           Atualmente estudo: NextJS, TailwindCSS e NodeJS mas possuo também experiencia básica com Java e Python.
-        </div>
-        <p className='.info'>
-          Contato:<br />
-          josiasduan@gmail.com<br />
-          (42) 98409-7698
         </p>
+        </div>
+        <div className='ml-auto mb-8'>
+        <Image
+                width={300}
+                height={300}
+                src="/Hero.svg"
+                alt="|Hero"
+                
+            />
+            </div>
       </div>
-      <h1 className='title mb-8 w-full text-center'>Projetos Recentes</h1>
-      <div className='w-full grid justify-items-center lg:grid-cols-2 gap-2 lg:w-max m-auto'>
+      <h1 className='mb-8 w-full text-center'>Projetos Recentes</h1>
+      <div className='w-full mt-12 grid justify-items-center lg:grid-cols-2 gap-2 lg:w-max m-auto'>
       <Project
           imgsrc="/FireChat.png"
           alt="FireChat"
