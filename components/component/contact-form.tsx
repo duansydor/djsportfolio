@@ -10,7 +10,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 export function ContactForm() {
-  const form = useRef<HTMLFormElement>("");
+  const form = useRef<HTMLFormElement>();
 
   const sendEmail = (e:any) => {
     e.preventDefault();
@@ -56,7 +56,7 @@ export function ContactForm() {
           alt="Contact Image"
           className="object-cover w-full h-full rounded-lg"
           height={400}
-          src="/contact.svg"
+          src="/Contact.svg"
           style={{
             aspectRatio: "500/400",
             objectFit: "cover",
