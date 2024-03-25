@@ -10,13 +10,13 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 export function ContactForm() {
-  const form = useRef<string>();
+  const form = useRef<string>("");
 
   const sendEmail = (e:any) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_0ztp7av', 'template_s2kjost', form.current, {
+      .sendForm('service_0ztp7av', 'template_s2kjost', form.current:string, {
         publicKey: '6Ctcx4RYZMtVHK3Vz',
       })
       .then(
