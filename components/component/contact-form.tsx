@@ -16,7 +16,7 @@ export function ContactForm() {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_0ztp7av', 'template_s2kjost', form.current:string, {
+      .sendForm('service_0ztp7av', 'template_s2kjost', form.current, {
         publicKey: '6Ctcx4RYZMtVHK3Vz',
       })
       .then(
