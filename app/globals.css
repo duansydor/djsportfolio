@@ -1,16 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 body {
-  font-family: "Inter", Arial;
+  font-family: "Montserrat", Arial;
 }
 
 header {
   color:#202e52 ;
   padding: 10px;
 }
-
+#title{
+  font-family: "Caveat",cursive;
+}
 footer {
   background-color: #202e52;
   color: #d9d9d9;

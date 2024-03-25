@@ -14,30 +14,27 @@ function Project(props: any) {
         setDialog("invisible")
     }
     return (
-        <div className=' flex-col justify-items-center items-center mb-6'>
+        <div className='flex items-center'>
+            <div>
             <Image
-                width={250}
-                height={250}
+                width={150}
+                height={150}
                 src={props.imgsrc}
                 alt={props.alt}
-                className='project-img rounded-full border-4 border-blue-950 w-52 h-52 mb-4 ml-auto mr-auto self-center'
+                className='project-img rounded-full border-4 border-blue-950 w-52 mb-4 ml-auto mr-auto self-center z-0'
             />
-            <a className='button flex text-center justify-center p-3 bg-blue-950 text-gray-100 rounded-md cursor-pointer' onClick={openInfo}>
+            <span className='button flex text-center justify-center p-3 bg-blue-950 text-gray-100 rounded-md cursor-pointer'>
                 {props.projname}
-            </a>
-            <div className=''>
-                <div className={"inset-center bg-gray-500 rounded-md border-2 border-gray-600 w-80 p-6 ml-1 mr-1 text-gray-200 " + dialog}>
-                    <a className='float-right -mr-4 -mt-4' onClick={closeInfo}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </a>
-                    <h1 className='w-full text-center p-2 bg-blue-700 rounded-lg'>{props.projname}</h1>
-                    <div className='text-gray-200 p-2 bg-slate-800 rounded-md mt-2'>
+            </span>
+            </div>
+
+                <div className={" bg-gray-500 rounded-md border-2 border-gray-600 w-64 p-1 ml-1 mr-1 text-gray-200"}>
+                    
+                    <h1 className='w-full text-center text-sm bg-blue-700 rounded-lg'>{props.projname}</h1>
+                    <div className='text-gray-200 p-2 bg-slate-800 rounded-md mt-2 text-sm'>
                         {props.projinfo}
                     </div>
-                    <br />
-                    <div className='text-gray-200 p-2 bg-slate-800 rounded-md'>
+                    <div className='text-gray-200 p-2 text-sm mt-1 bg-slate-800 rounded-md'>
                         <h3>Tecnologias utilizadas:</h3>
                         <div style={{ display: "flex", gap: 20 }}>
                             {
@@ -51,12 +48,11 @@ function Project(props: any) {
                             }
                         </div>
                     </div>
-                    <div className="mt-4" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                        <a className=' p-2 w-28 text-center mt-2 bg-blue-950 font-bold rounded-md border-white border-2' href={props.projlink} target="_blank">Confira!</a>
+                    <div className="mt-1" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                        <a className=' text-sm p-1 w-28 text-center mt-1 bg-blue-950 font-bold rounded-md border-white border-2' href={props.projlink} target="_blank">Confira!</a>
                     </div>
                 </div>
             </div>
-        </div>
     );
 }
 
