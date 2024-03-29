@@ -28,10 +28,10 @@ function Project(props: any) {
             </span>
             </div>
 
-                <div className={" bg-gray-500 rounded-md border-2 border-gray-600 w-64 p-1 ml-1 mr-1 text-gray-200"}>
+                <div className={" rounded-md border-2 border-gray-600 w-64 p-1 ml-1 mr-1 text-gray-200"}>
                     
                     <h1 className='w-full text-center text-sm bg-blue-700 rounded-lg'>{props.projname}</h1>
-                    <div className='text-gray-200 p-2 bg-slate-800 rounded-md mt-2 text-sm'>
+                    <div className='text-gray-800 p-2  rounded-md mt-2 text-sm'>
                         {props.projinfo}
                     </div>
                     <div className='text-gray-200 p-2 text-sm mt-1 bg-slate-800 rounded-md'>

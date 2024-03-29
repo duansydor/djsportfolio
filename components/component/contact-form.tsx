@@ -8,28 +8,30 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { Toaster, toast } from 'sonner'
 
-export function ContactForm() {
-  const form = useRef();
-
+export function ContactForm(props:any) {
+  const form:any = useRef();
+  const email_keys = props.email_keys
   const sendEmail = (e:any) => {
     e.preventDefault();
-
     emailjs
-      .sendForm('service_0ztp7av', 'template_s2kjost', form.current, {
-        publicKey: '6Ctcx4RYZMtVHK3Vz',
+      .sendForm(email_keys.service_id, email_keys.template_id, form.current, {
+        publicKey: email_keys.public_key,
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          toast.success('Obrigado por sua mensagem! logo entrarei em contato :)')
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          toast.error('Ocorreu um erro ao enviar o email'+error)
+          
         },
       );
+      form.current.reset()
   };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div  className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <form ref={form} onSubmit={sendEmail} className="w-full max-w-lg space-y-8">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold">Mais informações?</h2>
@@ -38,19 +40,21 @@ export function ContactForm() {
         <div className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="name">Name</Label>
-            <Input name="user_name" id="name" placeholder="Enter your name" />
+            <Input required name="user_name" id="name" placeholder="Enter your name" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
-            <Input name="user_email" id="email" placeholder="Enter your email" type="email" />
+            <Input required name="user_email" id="email" placeholder="Enter your email" type="email" />
           </div>
           <div className="space-y-2">
             <Label  htmlFor="message">Message</Label>
-            <Textarea name="message" className="min-h-[100px]" id="message" placeholder="Enter your message" />
+            <Textarea required name="message" className="min-h-[100px]" id="message" placeholder="Enter your message" />
           </div>
           <button className="bg-blue-900 rounded-lg p-2 text-gray-100"  type="submit">Send message</button>
         </div>
+        
       </form>
+      
       <div className="relative">
         <img
           alt="Contact Image"
@@ -64,6 +68,12 @@ export function ContactForm() {
           width={500}
         />
       </div>
+      <Toaster 
+        richColors
+        closeButton
+        expand={true} 
+        position="top-center"
+      />
     </div>
   )
 }

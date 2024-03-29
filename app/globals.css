@@ -6,13 +6,14 @@
 body {
   font-family: "Montserrat", Arial;
 }
-
+html { scroll-behavior: smooth; }
 header {
   color:#202e52 ;
   padding: 10px;
 }
 #title{
-  font-family: "Caveat",cursive;
+  font-family: "Caveat Variable",Arial;
+  font-weight: 700;
 }
 footer {
   background-color: #202e52;

@@ -1,10 +1,16 @@
 import Image from 'next/image'
-import Project from './Project'
+import '@fontsource-variable/caveat';
 import SocialLinks from './SocialLinks'
 import Footer from './Footer'
 import { CarouselCustom } from '@/components/component/carousel'
 import { ContactForm } from '@/components/component/contact-form'
 export default function Home() {
+
+  const email_keys = {
+    public_key : process.env.EMAIL_PUBLIC_KEY,
+    service_id : process.env.EMAIL_SERVICE_ID,
+    template_id : process.env.EMAIL_TEMPLATE_ID
+  }
   return (
     <div>
       {/* Text info */}
@@ -26,16 +32,20 @@ export default function Home() {
                 
             />
             </div>
+            <div id="projetos"></div>
       </div>
-      <div className="space-y-2 m-8">
-          <h2 className="text-3xl font-bold">Confira meus projetos</h2>
+      
+      <div  className="space-y-2 m-8" >
+          <h2  className="text-3xl font-bold">Confira meus projetos</h2>
           <p className="text-gray-500 dark:text-gray-400">Arraste para o lado</p>
         </div>
-      <div className='w-max ml-auto mr-auto'>
+      <div className='w-max ml-auto mr-auto' >
         <CarouselCustom/>
       </div>
-      <div className='p-8'>
-        <ContactForm/>
+      <div id="contato" className='mb-8'></div>
+  
+      <div className='p-8' >
+        <ContactForm email_keys={email_keys}/>
       </div>
       <div className='mt-8 w-full justify-center flex flex-row gap-2 ml-auto mr-auto'>
         <SocialLinks
