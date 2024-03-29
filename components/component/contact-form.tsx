@@ -10,14 +10,14 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'sonner'
 
-export function ContactForm(props:any) {
-  const form:any = useRef();
-  const email_keys = props.email_keys
+export function ContactForm() {
+  const form = useRef();
+
   const sendEmail = (e:any) => {
     e.preventDefault();
     emailjs
-      .sendForm(email_keys.service_id, email_keys.template_id, form.current, {
-        publicKey: email_keys.public_key,
+      .sendForm('service_0ztp7av', 'template_s2kjost', form.current, {
+        publicKey: '6Ctcx4RYZMtVHK3Vz',
       })
       .then(
         () => {
@@ -60,7 +60,7 @@ export function ContactForm(props:any) {
           alt="Contact Image"
           className="object-cover w-full h-full rounded-lg"
           height={400}
-          src="/contact.svg"
+          src="/Contact.svg"
           style={{
             aspectRatio: "500/400",
             objectFit: "cover",
