@@ -10,25 +10,15 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'sonner'
 
-<<<<<<< HEAD
 export function ContactForm(props:any) {
   const form:any = useRef();
   const email_keys = props.email_keys
-=======
-export function ContactForm() {
-  const form = useRef<HTMLFormElement>(null);
-  const currentform = form.current as string | HTMLFormElement;
->>>>>>> d55515760f1803265ff42dec7a8dbd953a236083
+  const currentform = form.current;
   const sendEmail = (e:any) => {
     e.preventDefault();
     emailjs
-<<<<<<< HEAD
       .sendForm(email_keys.service_id, email_keys.template_id, form.current, {
         publicKey: email_keys.public_key,
-=======
-      .sendForm('service_0ztp7av', 'template_s2kjost', currentform, {
-        publicKey: '6Ctcx4RYZMtVHK3Vz',
->>>>>>> d55515760f1803265ff42dec7a8dbd953a236083
       })
       .then(
         () => {
