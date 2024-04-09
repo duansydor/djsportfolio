@@ -7,7 +7,7 @@ function Header(props: any) {
             <div className="flex ml-auto gap-2">
               <a href="#projetos">Projetos</a>
               <a href="#contato">Contato</a>
-              <a href="https://djsydor.hashnode.dev/" target='_BLANK'>Blog</a>
+              <a href="https://dudevjourney.vercel.app/" target='_BLANK'>Blog</a>
             </div>
         </header>
     );
