@@ -2,8 +2,12 @@ import Image from 'next/image'
 import '@fontsource-variable/caveat';
 import SocialLinks from './SocialLinks'
 import Footer from './Footer'
-import { CarouselCustom } from '@/components/component/carousel'
+import { ProjectsGrid } from '@/components/component/ProjectsGrid'
 import { ContactForm } from '@/components/component/contact-form'
+import { UiUxGrid } from '@/components/component/UiUxGrid'
+import { DesignGrid } from '@/components/component/DesignGrid'
+import { PhotoGrid } from '@/components/component/PhotoGrid'
+import { IllustrationGrid } from '@/components/component/IllustrationGrid'
 export default function Home() {
 
   const email_keys = {
@@ -14,39 +18,59 @@ export default function Home() {
   return (
     <div>
       {/* Text info */}
-      <div className='p-10 mt-24 h-auto text-blue-950 flex items-start flex-col md:flex-row md:mt-12'>
-      <div className="mt-auto mb-auto">
-        <h1 className='mt-auto text-2xl font-bold' id="title">MEU ESPAÇO VIRTUAL</h1>
-        <h1 className="text-xl font-bold">sinta-se em casa!</h1>
-        <p className=' mt-2 w-96 text-lg font-light mb-auto sm:w-96'>
-          Seja bem vindo ao meu Portfólio. Me chamo Duan e sou um desenvolvedor front-end junior da cidade de Guarapuava, no Paraná.
-          Atualmente estudo: NextJS, TailwindCSS e NodeJS mas possuo também experiencia básica com Java e Python.
-        </p>
-        </div>
+      <div className='p-10 h-auto text-blue-950 flex items-start flex-col md:flex-row md:mt-12'>
+    
         <div className='ml-auto mb-8'>
-        <Image
+          <Image
+            width={1920}
+            height={1080}
+            src="/hero.jpg"
+            alt="|Hero"
+          />
+        {/* <Image
                 width={600}
                 height={600}
                 src="/Hero.svg"
                 alt="|Hero"
                 
             />
-            </div>
+        */}
+            </div> 
             <div id="projetos"></div>
       </div>
-      
-      <div  className="space-y-2 m-8" >
-          <h2  className="text-3xl font-bold">Confira meus projetos</h2>
-          <p className="text-gray-500 dark:text-gray-400">Arraste para o lado</p>
+       {/* Design */}
+      <div  className="w-full max-w-6xl mx-auto flex justify-center px-4 mb-10" >
+          <h2  className="text-5xl font-bold text-[#212e53]">Design</h2>
         </div>
-      <div className='w-max ml-auto mr-auto' >
-        <CarouselCustom/>
+      <div className='w-full max-w-6xl mx-auto flex justify-center px-4' >
+        <DesignGrid/>
+      </div>
+      {/* UI/UX */}
+      <div  className="w-full max-w-6xl mx-auto flex justify-center px-4 mb-10 mt-10" >
+          <h2  className="text-5xl font-bold text-[#212e53]">UI/UX</h2>
+        </div>
+      <div className='w-full max-w-6xl mx-auto flex justify-center px-4' >
+        <UiUxGrid/>
+      </div>
+      {/* Fotografia*/}
+      <div  className="w-full max-w-6xl mx-auto flex justify-center px-4 mb-10 mt-10" >
+          <h2  className="text-5xl font-bold text-[#212e53]">Fotografia</h2>
+        </div>
+      <div className='w-full max-w-6xl mx-auto flex justify-center px-4' >
+        <PhotoGrid/>
+      </div>
+      {/* Ilustração*/}
+      <div  className="w-full max-w-6xl mx-auto flex justify-center px-4 mb-10 mt-10" >
+          <h2  className="text-5xl font-bold text-[#212e53]">Ilustração</h2>
+        </div>
+      <div className='w-full max-w-6xl mx-auto flex justify-center px-4' >
+        <IllustrationGrid/>
       </div>
       <div id="contato" className='mb-8'></div>
   
-      <div className='p-8' >
+      {/* <div className='p-8' >
         <ContactForm email_keys={email_keys}/>
-      </div>
+      </div> */}
       <div className='mt-8 w-full justify-center flex flex-row gap-2 ml-auto mr-auto'>
         <SocialLinks
           nome="Github"
@@ -58,7 +82,7 @@ export default function Home() {
         />
         <SocialLinks
           nome="Instagram"
-          linksrc="https://www.instagram.com/djsydor_/"
+          linksrc="https://www.instagram.com/ssatanael/"
         />
       </div>
       
